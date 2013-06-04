@@ -81,20 +81,34 @@
             android:scaleType="centerInside"
             android:src="@drawable/camerabtn" />
     </LinearLayout>
-    
+
     <com.pactera.blsales.view.GalleryFlow
         android:id="@+id/home_gallery"
         android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="20px"/>
+        android:layout_height="300dp"
+        android:layout_marginTop="20px" />
 
     <TextView
         android:id="@+id/home_num_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/home_num_bg"
         android:gravity="center"
         android:text="25" />
+
+    <GridView
+        android:id="@+id/home_index_gd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:fadingEdge="none"
+        android:horizontalSpacing="1dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:verticalSpacing="1dp" >
+    </GridView>
 
 </LinearLayout>
