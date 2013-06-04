@@ -3,6 +3,7 @@ package com.pactera.blsales.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 public class BaseActivity extends Activity {
@@ -13,6 +14,8 @@ public class BaseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setSoftInputMode(
+				WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 	}
 
 	public void showMsg(String msg){
