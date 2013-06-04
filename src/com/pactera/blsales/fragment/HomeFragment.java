@@ -18,10 +18,12 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Gallery;
 import android.widget.GridView;
 
 public class HomeFragment extends Fragment {
-	private GalleryFlow mGallery;
+//	private GalleryFlow mGallery;
+	private Gallery mGallery;
 	private HomeGalleryAdapter adapter;
 	private IndexAdapter indexAdapter;
 	private GridView mGridView;
@@ -32,7 +34,7 @@ public class HomeFragment extends Fragment {
 		// TODO 041291 Auto-generated method stub
 
 		View view = inflater.inflate(R.layout.home, null);
-		mGallery = (GalleryFlow) view.findViewById(R.id.home_gallery);
+		mGallery = (Gallery) view.findViewById(R.id.home_gallery);
 		mGridView = (GridView) view.findViewById(R.id.home_index_gd);
 
 		List<Banner> list = new ArrayList<Banner>();
@@ -44,9 +46,9 @@ public class HomeFragment extends Fragment {
 		list.add(banner);
 		
 		mGallery.setBackgroundColor(Color.TRANSPARENT);
-		mGallery.setSpacing(-240);
-		mGallery.setMaxZoom(-60);
-		mGallery.setMaxRotationAngle(-60);
+//		mGallery.setSpacing(-240);
+//		mGallery.setMaxZoom(-60);
+//		mGallery.setMaxRotationAngle(-60);
 		mGallery.setFadingEdgeLength(0);
 		mGallery.setGravity(Gravity.CENTER_VERTICAL);
 		adapter = new HomeGalleryAdapter(getActivity(), list);

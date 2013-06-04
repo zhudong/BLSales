@@ -7,9 +7,6 @@
         android:id="@+id/home_gallery_banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/banner01" />
 
@@ -19,7 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
         android:src="@drawable/tag" />
 
 </FrameLayout>
