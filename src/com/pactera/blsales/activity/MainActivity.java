@@ -51,7 +51,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		mTran = getFragmentManager().beginTransaction();
 		HomeFragment homeFragment = new HomeFragment();
 		mTran.replace(R.id.home_content, homeFragment);
-		mTran.addToBackStack(null);
 		mTran.commit();
 		
 		homeLayout.setOnClickListener(this);

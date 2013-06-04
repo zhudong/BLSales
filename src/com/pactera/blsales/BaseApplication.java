@@ -9,8 +9,8 @@ public class BaseApplication extends Application {
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
+		mApplication = (BaseApplication) getApplicationContext();
 		super.onCreate();
-		mApplication = this;
 	}
 
 	@Override
