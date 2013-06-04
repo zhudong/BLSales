@@ -39,9 +39,9 @@ public class HomeFragment extends Fragment {
 		list.add(banner);
 		
 		mGallery.setBackgroundColor(Color.TRANSPARENT);
-		mGallery.setSpacing(2);
-		mGallery.setMaxZoom(100);
-		mGallery.setMaxRotationAngle(50);
+		mGallery.setSpacing(-120);
+		mGallery.setMaxZoom(120);
+		mGallery.setMaxRotationAngle(-60);
 		mGallery.setFadingEdgeLength(0);
 		mGallery.setGravity(Gravity.CENTER_VERTICAL);
 		adapter = new HomeGalleryAdapter(getActivity(), list);
