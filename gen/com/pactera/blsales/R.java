@@ -21,47 +21,63 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int blue_line=0x7f020000;
-        public static final int camerabtn=0x7f020001;
-        public static final int class_btn=0x7f020002;
-        public static final int class_btn_normal=0x7f020003;
-        public static final int class_btn_pressed=0x7f020004;
-        public static final int dott_blue=0x7f020005;
-        public static final int home_bg=0x7f020006;
-        public static final int home_btn=0x7f020007;
-        public static final int home_btn_normal=0x7f020008;
-        public static final int home_btn_pressed=0x7f020009;
-        public static final int home_top_arrow=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int mem_btn=0x7f02000c;
-        public static final int menu_bg=0x7f02000d;
-        public static final int more_btn=0x7f02000e;
-        public static final int more_btn_normal=0x7f02000f;
-        public static final int more_btn_pressed=0x7f020010;
-        public static final int nearby_btn=0x7f020011;
-        public static final int nearby_btn_normal=0x7f020012;
-        public static final int nearby_btn_pressed=0x7f020013;
-        public static final int search_bg=0x7f020014;
-        public static final int viewbtn=0x7f020015;
+        public static final int banner01=0x7f020000;
+        public static final int blue_line=0x7f020001;
+        public static final int camerabtn=0x7f020002;
+        public static final int class_btn=0x7f020003;
+        public static final int class_btn_normal=0x7f020004;
+        public static final int class_btn_pressed=0x7f020005;
+        public static final int dott_blue=0x7f020006;
+        public static final int home_bg=0x7f020007;
+        public static final int home_btn=0x7f020008;
+        public static final int home_btn_normal=0x7f020009;
+        public static final int home_btn_pressed=0x7f02000a;
+        public static final int home_num_bg=0x7f02000b;
+        public static final int home_top_arrow=0x7f02000c;
+        public static final int home_top_bg=0x7f02000d;
+        public static final int home_top_title=0x7f02000e;
+        public static final int home_top_title_bg_on=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int mem_btn=0x7f020011;
+        public static final int menu_bg=0x7f020012;
+        public static final int more_btn=0x7f020013;
+        public static final int more_btn_normal=0x7f020014;
+        public static final int more_btn_pressed=0x7f020015;
+        public static final int nearby_btn=0x7f020016;
+        public static final int nearby_btn_normal=0x7f020017;
+        public static final int nearby_btn_pressed=0x7f020018;
+        public static final int search_bg=0x7f020019;
+        public static final int tag=0x7f02001a;
+        public static final int viewbtn=0x7f02001b;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
+        public static final int action_settings=0x7f080010;
         public static final int class_iv=0x7f080004;
         public static final int class_layout=0x7f080003;
         public static final int home_content=0x7f080000;
+        public static final int home_gallery=0x7f08000c;
+        public static final int home_gallery_active=0x7f08000f;
+        public static final int home_gallery_banner=0x7f08000e;
         public static final int home_iv=0x7f080002;
         public static final int home_layout=0x7f080001;
-        public static final int home_top_title_layout=0x7f08000a;
+        public static final int home_num_txt=0x7f08000d;
+        public static final int home_top_title_layout=0x7f08000b;
         public static final int more_iv=0x7f080008;
         public static final int more_layout=0x7f080007;
         public static final int my_iv=0x7f080009;
         public static final int nearby_iv=0x7f080006;
         public static final int nearby_layout=0x7f080005;
+        public static final int textView1=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int bottom_main=0x7f030001;
-        public static final int home=0x7f030002;
+        public static final int classic=0x7f030002;
+        public static final int home=0x7f030003;
+        public static final int home_gallery_item=0x7f030004;
+        public static final int more=0x7f030005;
+        public static final int nearby=0x7f030006;
+        public static final int personal=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f070000;

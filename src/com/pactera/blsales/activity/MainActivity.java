@@ -3,7 +3,11 @@ package com.pactera.blsales.activity;
 import com.pactera.blsales.R;
 import com.pactera.blsales.R.layout;
 import com.pactera.blsales.R.menu;
+import com.pactera.blsales.fragment.ClassFragment;
 import com.pactera.blsales.fragment.HomeFragment;
+import com.pactera.blsales.fragment.MoreFragment;
+import com.pactera.blsales.fragment.NearbyFragment;
+import com.pactera.blsales.fragment.PersonalFragment;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -46,7 +50,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 		mTran = getFragmentManager().beginTransaction();
 		HomeFragment homeFragment = new HomeFragment();
-		mTran.add(homeFragment, "home");
+		mTran.replace(R.id.home_content, homeFragment);
 		mTran.addToBackStack(null);
 		mTran.commit();
 		
@@ -60,36 +64,52 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO 041291 Auto-generated method stub
+		FragmentTransaction tran = getFragmentManager().beginTransaction();
 		switch (v.getId()) {
 		case R.id.home_layout:
 			homeIV.setImageResource(R.drawable.home_btn_pressed);
 			classIV.setImageResource(R.drawable.class_btn_normal);
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
+			tran.replace(R.id.home_content, new HomeFragment());
+			tran.addToBackStack(null);
+			tran.commit();
 			break;
 		case R.id.class_layout:
 			homeIV.setImageResource(R.drawable.home_btn_normal);
 			classIV.setImageResource(R.drawable.class_btn_pressed);
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
+			tran.replace(R.id.home_content, new ClassFragment());
+			tran.addToBackStack(null);
+			tran.commit();
 			break;
 		case R.id.nearby_layout:
 			homeIV.setImageResource(R.drawable.home_btn_normal);
 			classIV.setImageResource(R.drawable.class_btn_normal);
 			nearbyIV.setImageResource(R.drawable.nearby_btn_pressed);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
+			tran.replace(R.id.home_content, new NearbyFragment());
+			tran.addToBackStack(null);
+			tran.commit();
 			break;
 		case R.id.more_layout:
 			homeIV.setImageResource(R.drawable.home_btn_normal);
 			classIV.setImageResource(R.drawable.class_btn_normal);
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_pressed);
+			tran.replace(R.id.home_content, new MoreFragment());
+			tran.addToBackStack(null);
+			tran.commit();
 			break;
 		case R.id.my_iv:
 			homeIV.setImageResource(R.drawable.home_btn_normal);
 			classIV.setImageResource(R.drawable.class_btn_normal);
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
+			tran.replace(R.id.home_content, new PersonalFragment());
+			tran.addToBackStack(null);
+			tran.commit();
 			break;
 		default:
 			break;
