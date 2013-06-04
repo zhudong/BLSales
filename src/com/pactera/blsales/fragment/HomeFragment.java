@@ -1,5 +1,7 @@
 package com.pactera.blsales.fragment;
 
+import com.pactera.blsales.R;
+
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +15,10 @@ public class HomeFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO 041291 Auto-generated method stub
-		return super.onCreateView(inflater, container, savedInstanceState);
+		
+		View view = inflater.inflate(R.layout.home, null);
+		
+		return view;
 	}
 
 }

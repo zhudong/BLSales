@@ -9,4 +9,6 @@
     <string name="class_txt">分类</string>
     <string name="nearby">附近</string>
     <string name="more">更多</string>
+    <string name="home_top_title">世纪联华</string>
+    <string name="home_top_search_hint">搜索商品促销信息</string>
 </resources>
