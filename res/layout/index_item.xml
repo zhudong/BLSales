@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/home_index_ib"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_index_btn"
     android:gravity="center"
     android:orientation="vertical" >
-<!-- 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" /> -->
 
-</Button>
+    <Button
+        android:id="@+id/home_index_ib"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_index_btn"
+        android:clickable="true" />
+
+</LinearLayout>

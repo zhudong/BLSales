@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
 			tran.replace(R.id.home_content, new HomeFragment());
-			tran.addToBackStack(null);
+//			tran.addToBackStack(null);
 			tran.commit();
 			break;
 		case R.id.class_layout:
@@ -81,7 +81,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
 			tran.replace(R.id.home_content, new ClassFragment());
-			tran.addToBackStack(null);
+//			tran.addToBackStack(null);
 			tran.commit();
 			break;
 		case R.id.nearby_layout:
@@ -90,7 +90,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			nearbyIV.setImageResource(R.drawable.nearby_btn_pressed);
 			moreIV.setImageResource(R.drawable.more_btn_normal);
 			tran.replace(R.id.home_content, new NearbyFragment());
-			tran.addToBackStack(null);
+//			tran.addToBackStack(null);
 			tran.commit();
 			break;
 		case R.id.more_layout:
@@ -99,7 +99,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			moreIV.setImageResource(R.drawable.more_btn_pressed);
 			tran.replace(R.id.home_content, new MoreFragment());
-			tran.addToBackStack(null);
+//			tran.addToBackStack(null);
 			tran.commit();
 			break;
 		case R.id.my_iv:

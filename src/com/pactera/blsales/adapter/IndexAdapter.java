@@ -3,24 +3,31 @@ package com.pactera.blsales.adapter;
 import java.util.List;
 
 import com.pactera.blsales.R;
+import com.pactera.blsales.fragment.ProductsFragment;
 import com.pactera.blsales.model.Index;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class IndexAdapter extends BaseAdapter {
+public class IndexAdapter extends BaseAdapter implements OnClickListener{
 	private Context ctx;
 	private List<Index> list;
 	private LayoutInflater mInflater;
+	private Fragment fragment;
 	
-	public IndexAdapter(Context context, List<Index> list){
+	public IndexAdapter(Context context, List<Index> list, Fragment fragment){
 		this.ctx = context;
 		this.list = list;
+		this.fragment = fragment;
 		this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
@@ -57,7 +64,19 @@ public class IndexAdapter extends BaseAdapter {
 		
 		Index index = list.get(arg0);
 		holder.indexBtn.setText(index.getTagName());
+		holder.indexBtn.setOnClickListener(this);
 		return conView;
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		FragmentManager fMgr = fragment.getFragmentManager();
+		FragmentTransaction fTran = fMgr.beginTransaction();
+		ProductsFragment productsFragment = new ProductsFragment();
+		fTran.replace(R.id.home_content, productsFragment);
+		fTran.addToBackStack(null);
+		fTran.commit();
 	}
 
 	class ViewHolder{
