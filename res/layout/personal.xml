@@ -123,34 +123,43 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
-
-                <ImageView
+				
+                <LinearLayout 
+                    android:clickable="true"
                     android:id="@+id/myData"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dip"
-                    android:src="@drawable/info_mem" />
-
-                <TextView
-                    android:layout_width="30dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="我的资料" />
-
-                <ImageView
+                    android:layout_height="wrap_content">
+	                <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center_vertical"
+	                    android:layout_marginLeft="5dip"
+	                    android:src="@drawable/my_data" />
+	                <TextView
+	                    android:layout_width="30dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center_vertical"
+	                    android:text="我的资料" />
+				</LinearLayout>
+				
+                <LinearLayout 
+                    android:clickable="true"
                     android:id="@+id/changePassword"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="30dip"
-                    android:src="@drawable/password_mem" />
-
-                <TextView
-                    android:layout_width="30dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="修改密码" />
+                    android:layout_height="wrap_content">
+	                <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center_vertical"
+	                    android:layout_marginLeft="30dip"
+	                    android:src="@drawable/my_change_password_press" />
+	
+	                <TextView
+	                    android:layout_width="30dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center_vertical"
+	                    android:text="修改密码" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
