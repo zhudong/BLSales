@@ -16,5 +16,19 @@
     <string name="products_area_txt">选择区域</string>
     <string name="products_stores_txt">选择门店</string>
     <string name="products_pre_and_try_txt">优惠/试用</string>
+    <string name="exit">退出</string>
+
+    <!-- 我的 -->
+    <string name="personal_data">个人资料</string>
+    <string name="save">保存</string>
+    <string name="change_name">修改昵称</string>
+    <string name="sex">性别</string>
+    <string name="area">区域</string>
+    <string name="age">年龄</string>
+    <string name="reset_password">重设密码</string>
+    <string name="input_old_password">请输入原密码</string>
+    <string name="input_new_password">请输入新密码</string>
+    <string name="confirm_password">请确认密码</string>
+    <string name="complete">完成</string>
 
 </resources>

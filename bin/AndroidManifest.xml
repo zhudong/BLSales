@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.PersonalActivity"></activity>
+        <activity android:name=".activity.PersonalDataActivity"></activity>
+        <activity android:name=".activity.ChangePasswordActivity"></activity>
     </application>
 
 </manifest>
