@@ -15,10 +15,10 @@
             android:layout_height="180dp" >
 
             <ImageView
-                android:layout_marginTop="15dp"
                 android:id="@+id/products_item_pic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:src="@drawable/list_img" />
 
             <ImageView
@@ -65,8 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:textColor="@android:color/holo_red_dark"
                 android:text="@string/product_item_new_price"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -77,9 +77,9 @@
 
             <TextView
                 android:id="@+id/productPromotionTimeTV"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/product_item_promotion_time"
                 android:textSize="14sp" />
         </LinearLayout>
