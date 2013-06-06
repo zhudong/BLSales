@@ -28,6 +28,8 @@
         <activity android:name=".activity.PersonalDataActivity"></activity>
         <activity android:name=".activity.ChangePasswordActivity"></activity>
         <activity android:name=".activity.PersonalMyCollectActivity"></activity>
+        <activity android:name=".activity.PersonalMyCareActivity"></activity>
+        <activity android:name=".activity.PersonalMyGetActivity"></activity>
     </application>
 
 </manifest>

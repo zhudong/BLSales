@@ -35,6 +35,8 @@
     <string name="confirm_password">请确认密码</string>
     <string name="complete">完成</string>
     <string name="my_collect">我收藏的</string>
+    <string name="my_care">我关注的</string>
+    <string name="my_get">我领取的</string>
     <string name="editer">编辑</string>
     <string name="expired">过期</string>
     <string name="no_expired">未过期</string>
@@ -43,5 +45,12 @@
     <string name="product_item_new_price">促销价：2.68元</string>
     <string name="product_item_promotion_time">促销时间：2013.05.12-2013.05.18</string>
     <string name="product_item_remind">自动提醒</string>
+    <string name="kele_yiping">可口可乐250ML一瓶</string>
+    <string name="total_num">总领取份数：50000</string>
+    <string name="remain_num">还剩：12560</string>
+    <string name="product_item_get_time">领取时间：2013.05.12-2013.05.18</string>
+    <string name="get_ma">领取二维码</string>
+    <string name="duanwujie_huodong">端午节活动</string>
+    <string name="sheng_xian">生鲜</string>
 
 </resources>

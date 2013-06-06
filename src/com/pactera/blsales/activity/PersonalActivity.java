@@ -10,11 +10,13 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class PersonalActivity extends Activity{
+public class PersonalActivity extends Activity implements OnClickListener{
 	private LinearLayout backTV;
 	private LinearLayout myData;
 	private LinearLayout changePassword;
 	private LinearLayout myCollect;
+	private LinearLayout myCare;
+	private LinearLayout myGet;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -60,6 +62,27 @@ public class PersonalActivity extends Activity{
 				startActivity(intent);
 			}
 		});
+		
+		myCollect = (LinearLayout) findViewById(R.id.myCare);
+		myCollect.setOnClickListener(this);
+		myCollect = (LinearLayout) findViewById(R.id.myGet);
+		myCollect.setOnClickListener(this);
+		
+	}
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent();
+		switch(v.getId()){
+		case R.id.myCare:
+			intent.setClass(PersonalActivity.this, PersonalMyCareActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.myGet:
+			intent.setClass(PersonalActivity.this, PersonalMyGetActivity.class);
+			startActivity(intent);
+			break;
+		}
 	}
 	
 }
