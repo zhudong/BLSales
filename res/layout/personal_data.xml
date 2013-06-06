@@ -11,7 +11,7 @@
         android:background="@drawable/home_top_bg" >
 
         <LinearLayout
-            android:id="@+id/backInMe"
+            android:id="@+id/backLayout"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="0.6"
@@ -62,7 +62,7 @@
             android:src="@drawable/blue_line" />
 
         <TextView
-            android:id="@+id/exitInMe"
+            android:id="@+id/saveTV"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"

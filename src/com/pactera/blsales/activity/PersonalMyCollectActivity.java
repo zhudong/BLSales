@@ -7,16 +7,18 @@ import com.pactera.blsales.R;
 import com.pactera.blsales.adapter.CollectProductsAdapter;
 import com.pactera.blsales.model.Product;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class PersonalMyCollectActivity extends BaseActivity implements
 		OnClickListener {
-
+	private LinearLayout backLayout;
 	private ListView productListGV;
 	private CollectProductsAdapter adapter;
 	private TextView noExpiredTV;
@@ -28,7 +30,9 @@ public class PersonalMyCollectActivity extends BaseActivity implements
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.personal_my_collect);
-
+		
+		backLayout = (LinearLayout) findViewById(R.id.backLayout);
+		backLayout.setOnClickListener(this);
 		noExpiredTV = (TextView) findViewById(R.id.noExpiredTV);
 		noExpiredTV.setOnClickListener(this);
 		ExpiredTV = (TextView) findViewById(R.id.expiredTV);
@@ -51,7 +55,13 @@ public class PersonalMyCollectActivity extends BaseActivity implements
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		Intent intent = new Intent();
 		switch(v.getId()){
+		case R.id.backLayout:
+			intent.setClass(PersonalMyCollectActivity.this, PersonalActivity.class);
+			startActivity(intent);
+			finish();
+			break;
 		case R.id.noExpiredTV:
 			if(expiredState){
 				v.setBackgroundColor(getResources().getColor(android.R.color.white));

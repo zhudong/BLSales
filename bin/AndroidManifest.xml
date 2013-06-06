@@ -30,6 +30,8 @@
         <activity android:name=".activity.PersonalMyCollectActivity"></activity>
         <activity android:name=".activity.PersonalMyCareActivity"></activity>
         <activity android:name=".activity.PersonalMyGetActivity"></activity>
+        <activity android:name=".activity.ShareActivity"></activity>
+        <activity android:name=".activity.ShareDetailActivity"></activity>
     </application>
 
 </manifest>
