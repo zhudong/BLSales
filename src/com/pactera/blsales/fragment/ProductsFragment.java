@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pactera.blsales.R;
+import com.pactera.blsales.activity.MainActivity;
+import com.pactera.blsales.activity.ProductDetailActivity;
 import com.pactera.blsales.adapter.ProductsAdapter;
 import com.pactera.blsales.model.Product;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -56,6 +59,9 @@ public class ProductsFragment extends Fragment implements OnItemClickListener{
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
 		Log.d(TAG, "ProductsFragment item click");
+		Intent intent = new Intent();
+		intent.setClass(getActivity(), ProductDetailActivity.class);
+		getActivity().startActivity(intent);
 	}
 
 }
