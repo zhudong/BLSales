@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/personal_page_bg_color"
     android:orientation="vertical" >
     <LinearLayout
         android:layout_width="fill_parent"
@@ -51,34 +50,34 @@
             android:layout_gravity="center"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="@string/reset_password"
+            android:text="@string/xinlange_weibo"
             android:textColor="@android:color/white"
             android:textSize="22sp" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blue_line" />
+
+        <TextView
+            android:id="@+id/saveTV"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_top_title"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 	
     <EditText 
-        android:id="@+id/oldPassword"
-        android:layout_marginTop="20dip"
-        style="@style/resetPasswordEditStyle"
-        android:hint="@string/input_old_password"/>
-     <EditText 
-        android:id="@+id/firstNewPassword"
-        style="@style/resetPasswordEditStyle"
-        android:hint="@string/input_new_password"/>
-      <EditText 
-        android:id="@+id/SecondNewPassword"
-        style="@style/resetPasswordEditStyle"
-        android:hint="@string/confirm_password"/>
-      
-      <Button 
-          android:id="@+id/completeBtn"
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="20dip"
-          android:textSize="22sp"
-          android:textColor="@android:color/white"
-          android:background="@drawable/my_collect_bg"
-          android:gravity="center"
-          android:text="@string/complete"/>
+        android:id="@+id/shareContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_margin="10dp"
+        android:text="@string/share_content"
+        android:textSize="16sp"/>
 </LinearLayout>

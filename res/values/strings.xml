@@ -52,5 +52,18 @@
     <string name="get_ma">领取二维码</string>
     <string name="duanwujie_huodong">端午节活动</string>
     <string name="sheng_xian">生鲜</string>
-
+	
+    <!-- 分享 -->
+    <string name="share">分享</string>
+    <string name="share_as_blow">---用以下方式分享---</string>
+    <string name="xinlange_weibo">新浪微博</string>
+    <string name="tencent_weibo">腾讯微博</string>
+    <string name="weixin_tell">微信告诉好友</string>
+    <string name="weixin">微信</string>
+    <string name="kaixin_web">开心网</string>
+    <string name="renren_web">人人网</string>
+    <string name="duanxin_tell">短信告诉好友</string>
+    <string name="duanxin">短信</string>
+    <string name="send">发送</string>
+    <string name="share_content">世纪联华XXXX店，现在正在进行可口可乐免费赠饮活动，只要通过手机APP就可以免费领取哦!</string>
 </resources>
