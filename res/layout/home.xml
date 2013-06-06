@@ -65,7 +65,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:hint="@string/home_top_search_hint"
-                    android:textSize="30px" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
-public class ProductDetailActivity extends Activity implements OnClickListener{
+public class ProductDetailActivity extends BaseActivity implements OnClickListener{
 	
 	private LinearLayout backLayout;
 
