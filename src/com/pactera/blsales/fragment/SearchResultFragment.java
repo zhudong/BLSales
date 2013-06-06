@@ -33,7 +33,7 @@ public class SearchResultFragment extends Fragment implements OnItemClickListene
 		List<SearchResult> list = new ArrayList<SearchResult>();
 		SearchResult result = new SearchResult();
 		result.setProductName("测试数据");
-		result.setProductName("120个结果（测试数据）");
+		result.setProductCount("120个结果（测试数据）");
 		list.add(result);
 		list.add(result);
 		list.add(result);

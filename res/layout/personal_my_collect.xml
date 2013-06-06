@@ -2,37 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/personal_page_bg_color"
     android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/home_top_bg"
-        android:orientation="horizontal" >
+        android:background="@drawable/home_top_bg" >
 
         <LinearLayout
-            android:id="@+id/home_top_title_layout"
-            android:layout_width="70dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:id="@+id/backLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
             android:background="@drawable/home_top_title"
-            android:clickable="true"
-            android:gravity="center"
-            android:orientation="horizontal" >
+            android:clickable="true" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow_d_left" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center" >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="@string/back"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_d_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/back"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <ImageView
@@ -40,51 +45,33 @@
             android:layout_height="wrap_content"
             android:src="@drawable/blue_line" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="5"
             android:gravity="center"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/products_top_title"
-                android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:text="@string/my_collect"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/blue_line" />
 
-        <LinearLayout
-            android:id="@+id/home_top_title_layout"
-            android:layout_width="70dp"
-            android:layout_height="match_parent"
+        <TextView
+            android:id="@+id/editerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/home_top_title"
             android:clickable="true"
             android:gravity="center"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/heart_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="@string/attention"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:text="@string/editer"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,14 +153,39 @@
         </LinearLayout>
     </LinearLayout>
 
-    <GridView
-        android:id="@+id/products_gridview"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/noExpiredTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/no_expired" />
+
+        <TextView
+            android:id="@+id/expiredTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="@string/expired" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/productListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:horizontalSpacing="15dp"
-        android:listSelector="@android:color/transparent"
-        android:numColumns="3"
-        android:verticalSpacing="5dp" >
-    </GridView>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" />
 
 </LinearLayout>

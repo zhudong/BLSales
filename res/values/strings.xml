@@ -17,11 +17,15 @@
     <string name="products_stores_txt">选择门店</string>
     <string name="products_pre_and_try_txt">优惠/试用</string>
     <string name="exit">退出</string>
+    <string name="product_detail_title">促销商品</string>
 
     <!-- 我的 -->
     <string name="personal_data">个人资料</string>
+    <string name="demo_name">约翰逊·斯嘉丽</string>
+    <string name="no_write">未填写</string>
     <string name="save">保存</string>
     <string name="change_name">修改昵称</string>
+    <string name="email">E-mail</string>
     <string name="sex">性别</string>
     <string name="area">区域</string>
     <string name="age">年龄</string>
@@ -30,5 +34,14 @@
     <string name="input_new_password">请输入新密码</string>
     <string name="confirm_password">请确认密码</string>
     <string name="complete">完成</string>
+    <string name="my_collect">我收藏的</string>
+    <string name="editer">编辑</string>
+    <string name="expired">过期</string>
+    <string name="no_expired">未过期</string>
+    <string name="product_item_name">西瓜500g</string>
+    <string name="product_item_old_price">原价：3.50元</string>
+    <string name="product_item_new_price">促销价：2.68元</string>
+    <string name="product_item_promotion_time">促销时间：2013.05.12-2013.05.18</string>
+    <string name="product_item_remind">自动提醒</string>
 
 </resources>

@@ -14,6 +14,7 @@ public class PersonalActivity extends Activity{
 	private LinearLayout backTV;
 	private LinearLayout myData;
 	private LinearLayout changePassword;
+	private LinearLayout myCollect;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -46,6 +47,16 @@ public class PersonalActivity extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(PersonalActivity.this,ChangePasswordActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		myCollect = (LinearLayout) findViewById(R.id.myCollection);
+		myCollect.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(PersonalActivity.this,PersonalMyCollectActivity.class);
 				startActivity(intent);
 			}
 		});

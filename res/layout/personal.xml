@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/personal_page_bg_color"
     android:orientation="vertical" >
 	<ScrollView 
 	    android:layout_width="match_parent"
@@ -58,7 +59,7 @@
 		            android:textColor="@android:color/white"
 		            android:text="我的"
 		            android:layout_weight="5"
-		            android:textSize="18sp" />
+		            android:textSize="22sp" />
 				
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -109,7 +110,7 @@
 		                    android:layout_gravity="center_vertical"
 		                    android:layout_marginLeft="10dip"
 		                    android:layout_weight="1"
-		                    android:text="约翰逊.斯嘉丽"
+		                    android:text="约翰逊·斯嘉丽"
 		                    android:textSize="16sp" />
 		
 		                <TextView
@@ -188,6 +189,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_gravity="center_vertical"
+		            android:layout_weight="0.3"
 		            android:src="@drawable/fav_icon" />
 		
 		        <TextView
@@ -229,6 +231,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_gravity="center_vertical"
+		            android:layout_weight="0.3"
 		            android:src="@drawable/focus_icon" />
 		
 		        <TextView
@@ -267,6 +270,7 @@
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
+		            android:layout_weight="0.3"
 		            android:layout_gravity="center_vertical"
 		            android:src="@drawable/get_icon" />
 		
