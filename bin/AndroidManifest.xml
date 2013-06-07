@@ -35,6 +35,7 @@
         <activity android:name=".activity.ProductDetailActivity"></activity>
         <activity android:name=".activity.MoreActivity"></activity>
         <activity android:name=".activity.SettingsActivity"></activity>
+        <activity android:name=".activity.NearbyActivity"></activity>
     </application>
 
 </manifest>

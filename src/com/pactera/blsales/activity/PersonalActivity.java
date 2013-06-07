@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class PersonalActivity extends Activity implements OnClickListener{
+public class PersonalActivity extends BaseActivity implements OnClickListener{
 	private LinearLayout backTV;
 	private LinearLayout myData;
 	private LinearLayout changePassword;
@@ -24,34 +24,13 @@ public class PersonalActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.personal);
 		
 		backTV = (LinearLayout) findViewById(R.id.backInMe);
-		backTV.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(PersonalActivity.this,MainActivity.class);
-				startActivity(intent);
-			}
-		});
+		backTV.setOnClickListener(this);
 		
 		myData = (LinearLayout)findViewById(R.id.myData);
-		myData.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(PersonalActivity.this,PersonalDataActivity.class);
-				startActivity(intent);
-			}
-		});
+		myData.setOnClickListener(this);
 		
 		changePassword = (LinearLayout) findViewById(R.id.changePassword);
-		changePassword.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(PersonalActivity.this,ChangePasswordActivity.class);
-				startActivity(intent);
-			}
-		});
+		changePassword.setOnClickListener(this);
 		
 		myCollect = (LinearLayout) findViewById(R.id.myCollection);
 		myCollect.setOnClickListener(new OnClickListener() {
@@ -74,6 +53,23 @@ public class PersonalActivity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		Intent intent = new Intent();
 		switch(v.getId()){
+		case R.id.backInMe:
+			intent.setClass(PersonalActivity.this,MainActivity.class);
+			startActivity(intent);
+			finish();
+			break;
+		case R.id.myData:
+			intent.setClass(PersonalActivity.this,PersonalDataActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.changePassword:
+			intent.setClass(PersonalActivity.this,ChangePasswordActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.myCollection:
+			intent.setClass(PersonalActivity.this,PersonalMyCollectActivity.class);
+			startActivity(intent);
+			break;
 		case R.id.myCare:
 			intent.setClass(PersonalActivity.this, PersonalMyCareActivity.class);
 			startActivity(intent);

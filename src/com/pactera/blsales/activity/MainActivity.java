@@ -13,13 +13,18 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class MainActivity extends BaseActivity implements OnClickListener {
+public class MainActivity extends BaseActivity implements OnClickListener,
+		OnTouchListener {
+	private static final String TAG = "MainActivity";
 
 	private LinearLayout homeLayout;
 	private LinearLayout classLayout;
@@ -59,7 +64,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		classLayout.setOnClickListener(this);
 		nearbyLayout.setOnClickListener(this);
 		moreLayout.setOnClickListener(this);
-		myIV.setOnClickListener(this);
+		// myIV.setOnClickListener(this);
+		myIV.setOnTouchListener(this);
 	}
 
 	@Override
@@ -86,27 +92,30 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			tran.commit();
 			break;
 		case R.id.nearby_layout:
-			homeIV.setImageResource(R.drawable.home_btn_normal);
-			classIV.setImageResource(R.drawable.class_btn_normal);
-			nearbyIV.setImageResource(R.drawable.nearby_btn_pressed);
-			moreIV.setImageResource(R.drawable.more_btn_normal);
-			tran.replace(R.id.home_content, new NearbyFragment());
-			// tran.addToBackStack(null);
-			tran.commit();
-			break;
-		case R.id.more_layout:
 //			homeIV.setImageResource(R.drawable.home_btn_normal);
 //			classIV.setImageResource(R.drawable.class_btn_normal);
-//			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
+//			nearbyIV.setImageResource(R.drawable.nearby_btn_pressed);
+//			moreIV.setImageResource(R.drawable.more_btn_normal);
+//			tran.replace(R.id.home_content, new NearbyFragment());
+//			// tran.addToBackStack(null);
+//			tran.commit();
+			Intent nearIntent = new Intent(MainActivity.this,
+					NearbyActivity.class);
+			startActivity(nearIntent);
+			break;
+		case R.id.more_layout:
+			// homeIV.setImageResource(R.drawable.home_btn_normal);
+			// classIV.setImageResource(R.drawable.class_btn_normal);
+			// nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
 			Intent moreIntent = new Intent(MainActivity.this,
 					MoreActivity.class);
 			startActivity(moreIntent);
 			break;
 		case R.id.my_iv:
-//			homeIV.setImageResource(R.drawable.home_btn_normal);
-//			classIV.setImageResource(R.drawable.class_btn_normal);
-//			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
-//			moreIV.setImageResource(R.drawable.more_btn_normal);
+			// homeIV.setImageResource(R.drawable.home_btn_normal);
+			// classIV.setImageResource(R.drawable.class_btn_normal);
+			// nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
+			// moreIV.setImageResource(R.drawable.more_btn_normal);
 			// tran.replace(R.id.home_content, new PersonalFragment());
 			// tran.addToBackStack(null);
 			// tran.commit();
@@ -117,6 +126,51 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		default:
 			break;
 		}
+	}
+
+	private int currentX;
+
+	private int currentY;
+	private int beforeY;
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO 041291 Auto-generated method stub
+		switch (event.getAction()) {
+		case MotionEvent.ACTION_DOWN:
+			currentX = (int) event.getRawX(); 
+			currentY = (int) event.getRawY();
+			beforeY = (int) v.getY();
+			break;
+		case MotionEvent.ACTION_UP:
+			v.setY(beforeY);
+			Intent intent = new Intent(MainActivity.this,
+					PersonalActivity.class);
+			startActivity(intent);
+			break;
+		case MotionEvent.ACTION_MOVE:
+			int x2 = (int) event.getRawX();  
+            int y2 = (int) event.getRawY();  
+            currentX = x2;  
+            currentY = y2; 
+			int h = v.getHeight() / 2;
+			if(y2 < 1000){
+				y2 = 1000;
+			}
+			if(y2 > 1180){
+				y2 = 1180;
+			}
+			myIV.setY(y2 - h - 50);  
+//			int newY = (int) event.getY() - h;
+			
+//			if(newY < oldY){
+//			}
+			break;
+
+		default:
+			break;
+		}
+		return true;
 	}
 
 	@Override
