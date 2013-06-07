@@ -8,7 +8,7 @@
     <Button
         android:id="@+id/home_index_ib"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="60dp"
         android:background="@drawable/home_index_btn"
         android:clickable="true" />
 
