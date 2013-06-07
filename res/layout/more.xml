@@ -12,7 +12,7 @@
         android:orientation="horizontal" >
 
         <LinearLayout
-            android:id="@+id/home_top_title_layout"
+            android:id="@+id/backLayout"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -69,10 +69,9 @@
         android:id="@+id/xinLangLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/weibo" />
         <ImageView
             android:layout_width="1dip"
@@ -100,10 +99,9 @@
         android:id="@+id/tencentLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/tecweibo" />
         <ImageView
             android:layout_width="1dip"
@@ -131,10 +129,9 @@
         android:id="@+id/weixinLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/weibo" />
         <ImageView
             android:layout_width="1dip"
@@ -162,10 +159,9 @@
         android:id="@+id/kaixinLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/kaixin" />
         <ImageView
             android:layout_width="1dip"
@@ -193,10 +189,9 @@
         android:id="@+id/renrenLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/renren" />
         <ImageView
             android:layout_width="1dip"
@@ -224,10 +219,9 @@
         android:id="@+id/duanxinLayout"
         style="@style/share_kind_layout_style" >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.3"
             android:src="@drawable/weibo" />
         <ImageView
             android:layout_width="1dip"

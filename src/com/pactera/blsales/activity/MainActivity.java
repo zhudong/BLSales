@@ -54,6 +54,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		mTran.replace(R.id.home_content, homeFragment);
 		mTran.commit();
 
+		homeIV.setImageResource(R.drawable.home_btn_pressed);
 		homeLayout.setOnClickListener(this);
 		classLayout.setOnClickListener(this);
 		nearbyLayout.setOnClickListener(this);
@@ -94,14 +95,18 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			tran.commit();
 			break;
 		case R.id.more_layout:
-			Intent moreIntent = new Intent(MainActivity.this, MoreActivity.class);
+//			homeIV.setImageResource(R.drawable.home_btn_normal);
+//			classIV.setImageResource(R.drawable.class_btn_normal);
+//			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
+			Intent moreIntent = new Intent(MainActivity.this,
+					MoreActivity.class);
 			startActivity(moreIntent);
 			break;
 		case R.id.my_iv:
-			// homeIV.setImageResource(R.drawable.home_btn_normal);
-			// classIV.setImageResource(R.drawable.class_btn_normal);
-			// nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
-			// moreIV.setImageResource(R.drawable.more_btn_normal);
+//			homeIV.setImageResource(R.drawable.home_btn_normal);
+//			classIV.setImageResource(R.drawable.class_btn_normal);
+//			nearbyIV.setImageResource(R.drawable.nearby_btn_normal);
+//			moreIV.setImageResource(R.drawable.more_btn_normal);
 			// tran.replace(R.id.home_content, new PersonalFragment());
 			// tran.addToBackStack(null);
 			// tran.commit();

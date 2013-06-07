@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 public class ShareActivity extends BaseActivity implements OnClickListener{
 	
+	private LinearLayout backLayout;
 	private LinearLayout xinLangLayout;
 	private LinearLayout tencentLayout;
 	private LinearLayout weixinLayout;
@@ -21,6 +22,9 @@ public class ShareActivity extends BaseActivity implements OnClickListener{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.share);
+		
+		backLayout = (LinearLayout) findViewById(R.id.backLayout);
+		backLayout.setOnClickListener(this);
 		
 		xinLangLayout = (LinearLayout) findViewById(R.id.xinLangLayout);
 		xinLangLayout.setOnClickListener(this);
@@ -40,9 +44,12 @@ public class ShareActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		Intent intent = new Intent(ShareActivity.this,ShareDetailActivity.class);
+		Intent intent = new Intent();
 		Bundle bundle = new Bundle();
 		switch(v.getId()){
+		case R.id.backLayout:
+			bundle.putString("kind", getString(R.string.xinlange_weibo));
+			break;
 		case R.id.xinLangLayout:
 			bundle.putString("kind", getString(R.string.xinlange_weibo));
 			break;
@@ -62,9 +69,16 @@ public class ShareActivity extends BaseActivity implements OnClickListener{
 			bundle.putString("kind", getString(R.string.duanxin));
 			break;
 		}
+		if(v.getId() == R.id.backLayout ){
+			intent.setClass(ShareActivity.this, ProductDetailActivity.class);
+		}else{
+			intent.setClass(ShareActivity.this,ShareDetailActivity.class);
+		}
 		intent.putExtras(bundle);
 		startActivity(intent);
+		finish();
 		
 	}
+	
 	
 }

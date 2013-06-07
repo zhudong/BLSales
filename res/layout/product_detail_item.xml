@@ -12,20 +12,20 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="180dp" >
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
 
             <ImageView
                 android:id="@+id/products_item_pic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:src="@drawable/list_img" />
 
             <ImageView
                 android:id="@+id/products_item_pic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="105dip"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="75dip"
                 android:src="@drawable/tag01" />
         </FrameLayout>
 
@@ -39,7 +39,7 @@
                 android:id="@+id/productNameTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="2dp"
                 android:gravity="fill_vertical|left"
                 android:text="@string/product_item_name"
                 android:textSize="18sp" />
@@ -55,7 +55,7 @@
                 android:id="@+id/producOldPriceTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:text="@string/product_item_old_price"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
@@ -64,7 +64,7 @@
                 android:id="@+id/productNewPriceTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="2dp"
                 android:text="@string/product_item_new_price"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="14sp" />
@@ -79,22 +79,24 @@
                 android:id="@+id/productPromotionTimeTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:text="@string/product_item_promotion_time"
                 android:textSize="14sp" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/dott_blue" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/line" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:gravity="center" >
 
             <LinearLayout
@@ -112,8 +114,8 @@
 
                 <ToggleButton
                     android:id="@+id/remindBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/toogle_btn_press"
                     android:textOff=""
                     android:textOn="" />
