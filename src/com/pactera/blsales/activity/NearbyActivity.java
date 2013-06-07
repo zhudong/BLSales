@@ -61,6 +61,7 @@ public class NearbyActivity extends BaseActivity implements OnItemClickListener,
 		Intent intent = new Intent();
 		intent.setClass(NearbyActivity.this, MainActivity.class);
 		startActivity(intent);
+		finish();
 	}
 
 	@Override

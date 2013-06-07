@@ -180,4 +180,12 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		return true;
 	}
 
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+		finish();
+	}
+	
+	
 }
