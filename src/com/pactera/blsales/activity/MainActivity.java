@@ -25,7 +25,8 @@ import android.widget.LinearLayout;
 public class MainActivity extends BaseActivity implements OnClickListener,
 		OnTouchListener {
 	private static final String TAG = "MainActivity";
-
+	public static String fragmentFlag="HomeFragment";
+	
 	private LinearLayout homeLayout;
 	private LinearLayout classLayout;
 	private LinearLayout nearbyLayout;

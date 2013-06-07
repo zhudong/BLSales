@@ -19,14 +19,14 @@
                 android:id="@+id/products_item_pic"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/list_img" />
+                android:src="@drawable/kele" />
 
             <ImageView
                 android:id="@+id/products_item_pic"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="75dip"
-                android:src="@drawable/tag01" />
+                android:src="@drawable/tag02" />
         </FrameLayout>
 
         <LinearLayout

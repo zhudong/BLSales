@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.pactera.blsales.BaseApplication;
 import com.pactera.blsales.R;
+import com.pactera.blsales.activity.MainActivity;
 import com.pactera.blsales.adapter.HomeGalleryAdapter;
 import com.pactera.blsales.adapter.IndexAdapter;
 import com.pactera.blsales.model.Banner;
@@ -43,7 +44,9 @@ public class HomeFragment extends Fragment implements OnItemClickListener,
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO 041291 Auto-generated method stub
-
+		
+		MainActivity.fragmentFlag = "HomeFragment";
+		
 		View view = inflater.inflate(R.layout.home, null);
 		mGallery = (Gallery) view.findViewById(R.id.home_gallery);
 		mGridView = (GridView) view.findViewById(R.id.home_index_gd);

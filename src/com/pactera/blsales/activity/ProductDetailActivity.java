@@ -14,6 +14,7 @@ public class ProductDetailActivity extends BaseActivity implements OnClickListen
 	
 	private LinearLayout backLayout;
 	private ImageView shareImg;
+	private Activity flagFromStartActivity = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,12 @@ public class ProductDetailActivity extends BaseActivity implements OnClickListen
 		
 		setContentView(R.layout.product_detail);
 		backLayout = (LinearLayout) findViewById(R.id.product_detail_back_layout);
+		
+		Intent intent = getIntent();
+		Bundle bundle = intent.getExtras();
+		if(bundle.getSerializable("act") != null){
+			flagFromStartActivity = (Activity) bundle.getSerializable("act");
+		}
 		
 		backLayout.setOnClickListener(this);
 		

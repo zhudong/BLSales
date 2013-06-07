@@ -68,8 +68,13 @@ public class ProductsFragment extends Fragment implements OnItemClickListener, O
 		// TODO Auto-generated method stub
 		FragmentManager fMgr = getFragmentManager();
 		FragmentTransaction fTran = fMgr.beginTransaction();
-		HomeFragment homeFragment = new HomeFragment();
-		fTran.replace(R.id.home_content, homeFragment);
+		if(MainActivity.fragmentFlag.equals("ClassFragment")){
+			ClassFragment fragment = new ClassFragment();
+			fTran.replace(R.id.home_content, fragment);
+		}else {
+			HomeFragment fragment = new HomeFragment();
+			fTran.replace(R.id.home_content, fragment);
+		}
 		fTran.commit();
 	}
 

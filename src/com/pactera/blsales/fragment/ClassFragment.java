@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.pactera.blsales.R;
+import com.pactera.blsales.activity.MainActivity;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -36,6 +37,9 @@ public class ClassFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		
+		MainActivity.fragmentFlag = "ClassFragment";
+		
 		View view = inflater.inflate(R.layout.classic, null);
 		kindListView = (ExpandableListView) view
 				.findViewById(R.id.productKindListView);
