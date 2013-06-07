@@ -12,6 +12,7 @@
         android:horizontalSpacing="2dp"
         android:listSelector="@android:color/transparent"
         android:numColumns="5"
+        android:background="@color/dkgray"
         android:verticalSpacing="2dp" >
     </GridView>
 
