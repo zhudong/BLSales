@@ -75,6 +75,7 @@
             android:src="@drawable/blue_line" />
 
         <ImageView
+            android:id="@+id/getMaImg"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -116,12 +117,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="5dp"
-        android:layout_weight="2"
         android:fadingEdge="none"
-        android:horizontalSpacing="1dp"
+        android:horizontalSpacing="0.5dp"
         android:listSelector="@android:color/transparent"
         android:numColumns="4"
-        android:verticalSpacing="1dp" >
+        android:verticalSpacing="0.5dp" >
     </GridView>
 
 </LinearLayout>

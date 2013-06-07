@@ -36,6 +36,7 @@
         <activity android:name=".activity.MoreActivity"></activity>
         <activity android:name=".activity.SettingsActivity"></activity>
         <activity android:name=".activity.NearbyActivity"></activity>
+        <activity android:name=".activity.GetMaActivity"></activity>
     </application>
 
 </manifest>

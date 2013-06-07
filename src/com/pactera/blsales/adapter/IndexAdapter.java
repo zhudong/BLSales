@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
@@ -61,6 +63,9 @@ public class IndexAdapter extends BaseAdapter implements OnClickListener{
 		}else{
 			holder = (ViewHolder) conView.getTag();
 		}
+		
+//		AbsListView.LayoutParams p = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 70);
+//		conView.setLayoutParams(p);
 		
 		Index index = list.get(arg0);
 		holder.indexBtn.setText(index.getTagName());

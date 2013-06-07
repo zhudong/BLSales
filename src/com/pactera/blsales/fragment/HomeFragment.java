@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.pactera.blsales.BaseApplication;
 import com.pactera.blsales.R;
+import com.pactera.blsales.activity.GetMaActivity;
 import com.pactera.blsales.activity.MainActivity;
 import com.pactera.blsales.adapter.HomeGalleryAdapter;
 import com.pactera.blsales.adapter.IndexAdapter;
@@ -15,6 +16,7 @@ import com.pactera.blsales.view.GalleryFlow;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +40,7 @@ public class HomeFragment extends Fragment implements OnItemClickListener,
 	private HomeGalleryAdapter adapter;
 	private IndexAdapter indexAdapter;
 	private GridView mGridView;
+	private ImageView getMaImg;
 	private ImageView searchIV;
 
 	@Override
@@ -51,6 +54,7 @@ public class HomeFragment extends Fragment implements OnItemClickListener,
 		mGallery = (Gallery) view.findViewById(R.id.home_gallery);
 		mGridView = (GridView) view.findViewById(R.id.home_index_gd);
 		searchIV = (ImageView) view.findViewById(R.id.home_top_search_iv);
+		getMaImg = (ImageView) view.findViewById(R.id.getMaImg);
 
 		List<Banner> list = new ArrayList<Banner>();
 		Banner banner = new Banner();
@@ -99,6 +103,7 @@ public class HomeFragment extends Fragment implements OnItemClickListener,
 		mGridView.setAdapter(indexAdapter);
 		mGridView.setOnItemClickListener(this);
 		searchIV.setOnClickListener(this);
+		getMaImg.setOnClickListener(this);
 		return view;
 	}
 
@@ -119,13 +124,22 @@ public class HomeFragment extends Fragment implements OnItemClickListener,
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Log.d(TAG, "search click");
+		Intent intent = new Intent();
+		switch(v.getId()){
+		case R.id.getMaImg:
+			intent.setClass(getActivity(), GetMaActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.home_top_search_iv:
+			FragmentManager fMgr = getFragmentManager();
+			FragmentTransaction fTran = fMgr.beginTransaction();
+			SearchResultFragment searchFragment = new SearchResultFragment();
+			fTran.replace(R.id.home_content, searchFragment);
+			fTran.addToBackStack(null);
+			fTran.commit();
+			break;
+		}
 		
-		FragmentManager fMgr = getFragmentManager();
-		FragmentTransaction fTran = fMgr.beginTransaction();
-		SearchResultFragment searchFragment = new SearchResultFragment();
-		fTran.replace(R.id.home_content, searchFragment);
-		fTran.addToBackStack(null);
-		fTran.commit();
 	}
 
 }

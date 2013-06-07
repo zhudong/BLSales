@@ -18,6 +18,8 @@
     <string name="products_pre_and_try_txt">优惠/试用</string>
     <string name="exit">退出</string>
     <string name="product_detail_title">促销商品</string>
+    <string name="shiyong_get">试用领取</string>
+    <string name="get_ma_title">请在试用品领取点出示此二维码，由工作人员扫描确认后，即可领取试用品</string>
 
     <!-- 我的 -->
     <string name="personal_data">个人资料</string>
